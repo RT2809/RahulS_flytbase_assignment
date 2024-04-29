@@ -13,13 +13,14 @@ print ' move in a triangular trajectory of side length 10m at a height of 10m'
 
 print ' A to B of triangle ABC'
 # gives us the desired side length of 10m.
-drone.position_set(0, 0, 10, relative=True)
-
-print ' B to C of triangle ABC'
 drone.position_set(5, 8.66, 0, relative=True)
 
-print '  C to A of triangle ABC'
+print ' B to C of triangle ABC'
 drone.position_set(-5, 8.66, 0, relative=True)
+
+print '  C to A of triangle ABC'
+drone.position_set(0, -10, 10, relative=True)
+
 
 print ' Landing'
 drone.land(async=False)
